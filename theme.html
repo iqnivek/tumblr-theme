@@ -10,8 +10,8 @@
 
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
   <meta name="description" content="{MetaDescription}"/>
 
   <!-- DEFAULT COLORS -->
@@ -79,11 +79,11 @@
     /* TAGS */
     .post-footer li.tags ul, .post-footer li.tags ul li{display:inline; padding: 0;}
     .post-footer li.tags ul li {margin-left: 0.4em;}
-	
-	/* NOTES */
-	ol.notes { margin: 0; padding: 0; }
-	ol.notes li.note { margin: 0 0 0.75em 0; padding: 0 0 0.75em 0 }
-	ol.notes img.avatar { display: none; }
+  
+  /* NOTES */
+  ol.notes { margin: 0; padding: 0; }
+  ol.notes li.note { margin: 0 0 0.75em 0; padding: 0 0 0.75em 0 }
+  ol.notes img.avatar { display: none; }
 
     /* PAGINATION */
     #pagination{margin:3em 0}
@@ -119,7 +119,7 @@
     #header h1 {
       text-align: center;
       font-size: 40px;
-      margin: 0 auto 2em;
+      margin: 0 auto;
       width: 300px;
       line-height: 1.1;
       text-transform: uppercase;
@@ -129,14 +129,15 @@
       text-align: center;
       margin-bottom: 0;
     }
-    #header h1:after {
-        content: "Words and pictures and sounds.";
-        font-size: 13px;
-        display: block;
-        color: #888;
-        /* font-family: arial; */
-        text-transform: none;
-        margin-top: 10px;
+    #header p {
+      font-family: Georgia, serif;
+      text-align: center;
+      font-size: 13px;
+      display: block;
+      color: #888;
+      text-transform: none;
+      margin-top: 10px;
+      margin-bottom: 5em;
     }
     #portrait {
       border-radius: 500px;
@@ -167,6 +168,7 @@
       
       <div class="portrait-wrapper"><image id="portrait" src={PortraitURL-128} /></div><!-- @kevin customization -->
       <h1><a href="/">{Title}</a></h1>
+      <p class="description">{Description}</p>
     </div> <!-- end #header -->
   
     <div id="posts">
@@ -230,11 +232,11 @@
         {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
       {/block:Photo}
 
-			{block:Photoset}
-			<div class="photoset-post">
-				{Photoset-500}
-				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-			{/block:Photoset}
+      {block:Photoset}
+      <div class="photoset-post">
+        {Photoset-500}
+        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+      {/block:Photoset}
       
       
       {block:Chat}
@@ -256,7 +258,7 @@
           {block:Date}<li class="date"><h3>{Month} {DayOfMonthWithZero}, {Year}, {12Hour}:{Minutes}{AmPm}{/block:Date}</h3>{block:IfShowNotes}{block:NoteCount}<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{NoteCountWithLabel}</h3>{/block:NoteCount}{/block:IfShowNotes}</li>
           {block:Date}
           {block:IfNotDisqusShortname}<li><a href="{Permalink}" class="permalink">{lang:Permalink}</a></li>{/block:IfNotDisqusShortname}
-		  {block:IfDisqusShortname}<li><a href="{Permalink}#disqus_thread" class="permalink">{lang:Comments}</a></li>{block:IfDisqusShortname}
+      {block:IfDisqusShortname}<li><a href="{Permalink}#disqus_thread" class="permalink">{lang:Comments}</a></li>{block:IfDisqusShortname}
           {/block:Date}
         </ul>
       </div> <!-- end single post -->
@@ -270,7 +272,7 @@
       {block:PostNotes}
       {/block:IfShowNotes}
       
-	  {block:IfDisqusShortname}
+    {block:IfDisqusShortname}
       <div id="disqus_thread"></div>
       <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
       <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
@@ -342,7 +344,7 @@
     </div> <!-- end footer contain -->
   </div> <!-- end footer -->
 
-	{block:IfDisqusShortname}
+  {block:IfDisqusShortname}
   <script type="text/javascript">
   //<![CDATA[
   (function() {
