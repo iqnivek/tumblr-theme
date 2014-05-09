@@ -1,7 +1,3 @@
-/* Add to tumblr custom CSS:
- * @import url('https://raw.githubusercontent.com/iqnivek/tumblr-theme/master/optica_custom.css');
- */
-
 /* Always show expanded footer http://optica-tests.tumblr.com/post/58157747666/show-expanded-footer-at-all-times */
 #posts article {
     margin-bottom: 20px;
