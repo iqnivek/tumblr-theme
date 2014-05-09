@@ -1,0 +1,22 @@
+/* Add to tumblr custom CSS:
+ * @import url('https://raw.githubusercontent.com/iqnivek/tumblr-theme/master/optica_custom.css');
+ */
+
+/* Always show expanded footer http://optica-tests.tumblr.com/post/58157747666/show-expanded-footer-at-all-times */
+#posts article {
+    margin-bottom: 20px;
+}
+.post {
+    margin-bottom: 0;
+}
+.panel {
+    opacity: 1;
+}
+.post-footer {
+    opacity: 1;
+}
+
+/* Display dates http://optica-tests.tumblr.com/post/81680496531/display-dates-on-index-pages */
+.post-date {
+    display: block;
+}
