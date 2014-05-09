@@ -16,3 +16,11 @@
 .post-date {
     display: block;
 }
+
+/* Custom font */
+body, h1 {
+  font-family: Vollkorn, sans-serif;
+}
+body {
+  font-size: 1.2em;
+}
